@@ -36,11 +36,14 @@ class TwitchReader(threading.Thread):
         self.running = False
 
     def load_config(self, filename=DEFAULT_TWITCH_FILE):
-        with open(filename, 'r') as f:
-            self._config.update(json.load(f))
+        try:
+            with open(filename, 'r') as f:
+                self._config.update(json.load(f))
+        except IOError:
+            pass
 
     def save_config(self, filename=DEFAULT_TWITCH_FILE):
-        with open(filename, 'w') as f:
+        with open(filename, 'w+') as f:
             json.dump(self._config, f)
 
     def stop(self):

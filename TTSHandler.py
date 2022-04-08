@@ -21,12 +21,15 @@ class TTSHandler(threading.Thread):
         self.running = False
 
     def load_users(self, filename=DEFAULT_USER_FILE):
-        with open(filename, 'r') as f:
-            file_users = json.load(f)
-            self.users.update(file_users)
+        try:
+            with open(filename, 'r') as f:
+                file_users = json.load(f)
+                self.users.update(file_users)
+        except IOError:
+            pass
 
     def save_users(self, filename=DEFAULT_USER_FILE):
-        with open(filename, 'w') as f:
+        with open(filename, 'w+') as f:
             json.dump(self.users, f)
 
     def receive(self, username, message):
