@@ -14,11 +14,10 @@ Gives new users a random voice selected from the ones installed, and allows them
 	2. Replace `#channelname` with the name of your channel (keeping the `#`).
 	3. Save your changes.
 5. Create a new file called `users.json` which just contains `{}`.
-6. In the folder you unzipped the contents of this repo into, open the command line by clicking the address bar of the folder and typing `cmd` and then hitting enter.
-7. Run the following commands
+6. Open the command line and run the following commands.
 	1. `pip install pyttsx3`
 	2. `pip install emoji`
-8. The TTS is now ready to be used, and can be ran by double clicking `Main.py`.
+7. The TTS is now ready to be used, and can be ran by double clicking `Main.py`.
 
 ## Using Alternate Voices
 
