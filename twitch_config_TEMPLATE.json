@@ -1,7 +1,6 @@
 {
   "server": "irc.chat.twitch.tv",
   "port": 6667,
-  "nickname": "botname",
   "token": "oauth:TOKENHERE",
   "channel": "#channelname"
 }
