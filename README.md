@@ -10,7 +10,7 @@ Gives new users a random voice selected from the ones installed, and allows them
 2. Download the [contents of this repository](https://github.com/Skyhawk33/TwitchTTS/archive/refs/heads/main.zip) and unzip them into a folder.
 3. Copy `twitch_config_TEMPLATE.json` and rename it to `twitch_config.json`.
 4. Open `twitch_config.json` with Notepad and do the following:
-	1. Generate an OAuth token for your channel using [this tool](https://twitchapps.com/tmi/) and replace `TOKENHERE` with the generate token.
+	1. Generate an OAuth token for your channel using [this tool](https://twitchapps.com/tmi/) and replace `TOKENHERE` with the generated token.
 	2. Replace `#channelname` with the name of your channel (keeping the `#`).
 	3. Save your changes.
 5. Create a new file called `users.json` which just contains `{}`.
