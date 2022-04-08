@@ -23,11 +23,11 @@ class TwitchReader(threading.Thread):
 
         # keep sensitive information stored in a separate config file
         self._config = {
-            'server': '',
-            'port': 0,
-            'nickname': '',
-            'token': '',
-            'channel': ''
+            'server': 'irc.chat.twitch.tv',
+            'port': 6667,
+            'nickname': 'bot',
+            'token': 'oauth:TOKENHERE',
+            'channel': '#channelname'
         }
         self.load_config()
 
@@ -37,7 +37,7 @@ class TwitchReader(threading.Thread):
 
     def load_config(self, filename=DEFAULT_TWITCH_FILE):
         with open(filename, 'r') as f:
-            self._config = json.load(f)
+            self._config.update(json.load(f))
 
     def save_config(self, filename=DEFAULT_TWITCH_FILE):
         with open(filename, 'w') as f:
