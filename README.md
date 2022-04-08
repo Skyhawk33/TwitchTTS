@@ -21,7 +21,13 @@ Gives new users a random voice selected from the ones installed, and allows them
 
 ## Using Alternate Voices
 
-Alternate voices can be used by a user, but the voice package must first be installed on your machine before running `Main.py`.
+Alternate voices can be used by a user, but the voice package must first be installed on your machine See (Installing Alternate Voices) before running `Main.py`.
+
+### Installing Alternate Voices (Windows)
+
+1. Select Start > Settings > Time & Language > Language
+2. Choose a language from the **Add a language list** under **Preferred languages**, and then select **Options**.
+3. Select **Download** from the Download language pack option.
 
 A user can switch voices by using typing the command `!voice [Speaker] [Rate]`.
 
