@@ -8,26 +8,28 @@ Gives new users a random voice selected from the ones installed, and allows them
 
 1. Install the latest version of [Python](https://www.python.org/downloads/).
 2. Download the [contents of this repository](https://github.com/Skyhawk33/TwitchTTS/archive/refs/heads/main.zip) and unzip them into a folder.
-3. Copy `twitch_config_TEMPLATE.json` and rename it to `twitch_config.json`.
-4. Open `twitch_config.json` with Notepad and do the following:
+3. Open `twitch_config.json` with Notepad and do the following:
 	1. Generate an OAuth token for your channel using [this tool](https://twitchapps.com/tmi/) and replace `TOKENHERE` with the generated token.
 	2. Replace `#channelname` with the name of your channel (keeping the `#`).
 	3. Save your changes.
-5. Create a new file called `users.json` which just contains `{}`.
-6. Open the command line and run the following commands.
+4. Open the command line and run the following commands.
 	1. `pip install pyttsx3`
 	2. `pip install emoji`
-7. The TTS is now ready to be used, and can be ran by double clicking `Main.py`.
+5. The TTS is now ready to be used, and can be ran by double clicking `Main.py`.
+
+## Installing Alternate Voices
+
+In order for the TTS to use alternate voices, the language packs must be installed on your machine.
+
+[How to install language packs for Windows](https://support.microsoft.com/en-us/windows/language-packs-for-windows-a5094319-a92d-18de-5b53-1cfc697cfca8)
+
+[How to install language packs for Mac](https://www.imore.com/how-add-new-languages-your-mac)
+
+The TTS will only use speakers listed below, so installing additional language packs will have no effect.
 
 ## Using Alternate Voices
 
 Alternate voices can be used by a user, but the voice package must first be installed on your machine See (Installing Alternate Voices) before running `Main.py`.
-
-### Installing Alternate Voices (Windows)
-
-1. Select Start > Settings > Time & Language > Language
-2. Choose a language from the **Add a language list** under **Preferred languages**, and then select **Options**.
-3. Select **Download** from the Download language pack option.
 
 A user can switch voices by using typing the command `!voice [Speaker] [Rate]`.
 
