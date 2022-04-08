@@ -23,7 +23,7 @@ In order for the TTS to use alternate voices, the language packs must be install
 
 [How to install language packs for Windows](https://support.microsoft.com/en-us/windows/language-packs-for-windows-a5094319-a92d-18de-5b53-1cfc697cfca8)
 
-[How to install language packs for Mac](https://www.imore.com/how-add-new-languages-your-mac)
+[How to install language packs for Mac](https://www.imore.com/how-add-new-languages-your-mac) (Untested. If you are able to get this working on mac, let me know!)
 
 The TTS will only use speakers listed below, so installing additional language packs will have no effect.
 
