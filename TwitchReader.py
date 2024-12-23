@@ -56,11 +56,15 @@ class TwitchReader(threading.Thread):
         sock.send(f'PASS {self._config["token"]}\n'.encode('utf-8'))
         sock.send(f'NICK {self._config["nickname"]}\n'.encode('utf-8'))
         sock.send(f'JOIN {self._config["channel"]}\n'.encode('utf-8'))
+        sock.settimeout(10)
 
         print('Entering Chat loop')
         self.running = True
         while self.running:
-            resp = sock.recv(2048).decode('utf-8')
+            try:
+                resp = sock.recv(2048).decode('utf-8')
+            except socket.timeout:
+                continue
 
             if resp.startswith('PING'):
                 sock.send("PONG :tmi.twitch.tv2 3\n".encode('utf-8'))
